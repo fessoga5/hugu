@@ -231,7 +231,7 @@ function setHandlers() {
 	
 
 	_socket.on('currentTrack', function(track) {
-		$('#currentTrack').html();
+		if (track==null) {track = $('#currentTrack').html();}
 
 		var avatar = $('<img />',{
 			src: track.addByUserAvatar, 
